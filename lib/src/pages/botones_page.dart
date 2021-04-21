@@ -6,6 +6,10 @@ class BotonesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(
+      //   title: Text('Menu'),
+      //   backgroundColor: Colors.pink.shade300,
+      // ),
         body: Center(
             child: Stack(
           children: [

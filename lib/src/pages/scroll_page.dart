@@ -6,7 +6,7 @@ class ScrollPage extends StatelessWidget {
     return Scaffold(
         body: PageView(
       scrollDirection: Axis.vertical,
-      children: [_pagina1(), _pagina2()],
+      children: [_pagina1(), _pagina2(context)],
     ));
   }
 
@@ -54,7 +54,7 @@ class ScrollPage extends StatelessWidget {
     );
   }
 
-  Widget _pagina2() {
+  Widget _pagina2(BuildContext context) {
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -66,7 +66,9 @@ class ScrollPage extends StatelessWidget {
             child: Text('Bienvenidos', style: TextStyle(fontSize: 20.0)),
           ),
           style: ElevatedButton.styleFrom(shape: StadiumBorder()),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, 'botones');
+          },
         ),
       ),
     );
